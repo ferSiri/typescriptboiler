@@ -1,4 +1,6 @@
-const getTestState = (state : any)=>{
+import { AppState } from "../reducers";
+
+const getTestState = (state : AppState )=>{
     return state.TestReducer;
 };
 

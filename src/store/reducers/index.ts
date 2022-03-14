@@ -1,9 +1,15 @@
 
-import TestReducer from './testReducer'
+import TestReducer, {State as TestState} from './testReducer'
 import {combineReducers} from 'redux'
 
-const rootReducer = combineReducers<any>({
+interface State {
+    TestReducer?: TestState;
+};
+
+const rootReducer = combineReducers<State>({
     TestReducer
 })
 
 export default rootReducer;
+
+export type AppState = ReturnType<typeof rootReducer>;

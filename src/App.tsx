@@ -12,7 +12,7 @@ const App : React.FC = () => {
         <div>
             <button onClick={()=>dispatch(addElement(Math.floor(Math.random() * 1000000), "bla bla bla"))}></button>
             <ul>
-                {elements.map((el: any)=><div>{el.elementId}</div>)}
+                {elements && elements.map((el)=><div>{el.elementId}</div>)}
             </ul>
 
         </div>
